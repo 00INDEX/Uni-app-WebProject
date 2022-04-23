@@ -14,3 +14,9 @@ unpackage/dist/dev/
 
 # python
 *.pyc
+
+# IDE
+.hbuilderx
+.vite
+.idea
+.vs

@@ -1,5 +1,10 @@
 import App from './App'
 
+/**
+ * 全局引用
+ **/
+
+
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
