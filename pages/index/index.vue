@@ -1,9 +1,10 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+		<span>{{title}}</span>
+		<span>{{vuex}}</span>
+		<com-example></com-example>
+		<span>{{$example()}}</span>
+		<span class="animate__animated animate_custom_hello" style='font-size: 35px; font-weight: 1000;'>Hello Animate.css</span>
 	</view>
 </template>
 
@@ -11,14 +12,19 @@
 	export default {
 		data() {
 			return {
-				title: process.env.VUE_APP_TEST
+				title: import.meta.env.VITE_ENV_TEST
+			}
+		},
+		computed: {
+			vuex(){
+				return this.$store.state.val
 			}
 		},
 		onLoad() {
-
+			
 		},
 		methods: {
-
+			
 		}
 	}
 </script>
@@ -48,5 +54,16 @@
 	.title {
 		font-size: 36rpx;
 		color: #8f8f94;
+	}
+	
+	.animate_custom_hello{
+		animation: hello 2s infinite;
+	}
+	@keyframes hello {
+		0% {color: red}
+		25% {color: green}
+		50% {color: blue}
+		75% {color: purple}
+		100% {color: red}
 	}
 </style>

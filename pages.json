@@ -22,5 +22,11 @@
 				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"com-(.*)": "@/components/com-$1/com-$1.vue"
+		}
 	}
 }
