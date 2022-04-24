@@ -4,25 +4,39 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:h5": "uni",
+    "dev:mp-weixin": "uniapp-cli-run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dcloudio/uni-app": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-app-plus": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-components": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-h5": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-alipay": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-baidu": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-kuaishou": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-lark": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-qq": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-toutiao": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-quickapp-webview": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-ui": "^1.4.12",
+    "@vitejs/plugin-vue": "^2.2.4",
     "animate.css": "^4.1.1",
     "axios": "^0.26.1",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.3",
-    "nprogress": "^0.2.0",
-    "vue-clipboard3": "^2.0.0",
-    "vue-video-player": "^5.0.2",
-    "vue3-lazy": "^1.0.0-alpha.1",
-    "vuex": "^4.0.2",
-    "webpack": "^5.72.0",
-    "xml2json": "^0.12.0"
+    "vue": "^3.2.33",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "webpack-cli": "^4.9.2"
+    "@dcloudio/uni-automator": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-helper-json": "^1.0.13",
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3040120220308001",
+    "@types/html5plus": "^1.0.2",
+    "@types/uni-app": "^1.4.4",
+    "vite": "^2.9.5"
   }
 }

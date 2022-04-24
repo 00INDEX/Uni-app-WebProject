@@ -11,6 +11,8 @@ node_modules/
 .eslintcache
 unpackage/dist/build/
 unpackage/dist/dev/
+dist/build/
+dist/dev
 
 # python
 *.pyc
