@@ -1,31 +1,20 @@
 <template>
 	<view class="content">
-		<span>{{title}}</span>
-		<span>{{vuex}}</span>
+		<span>{{env}}</span>
+		<span>{{store.val}}</span>
+		<span>{{util()}}</span>
 		<com-example></com-example>
-		<span>{{$example()}}</span>
-		<span class="animate__animated animate_custom_hello" style='font-size: 35px; font-weight: 1000;'>Hello Animate.css</span>
+		<span class="animate__animated animate_custom_hello" style='font-size: 35px; font-weight: 1000;'>测试一下动画</span>
+		<button @click="changeStore">点我测试一下响应式对象</button>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: import.meta.env.VITE_ENV_TEST
-			}
-		},
-		computed: {
-			vuex(){
-				return this.$store.state.val
-			}
-		},
-		onLoad() {
-			
-		},
-		methods: {
-			
-		}
+<script setup>
+	const env = import.meta.env.VITE_ENV_TEST
+	const store = exampleStore().store
+	const util = exampleUtil
+	const changeStore = ()=>{
+		exampleStore().store.val = "修改成功"
 	}
 </script>
 
