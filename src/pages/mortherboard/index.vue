@@ -1,10 +1,11 @@
 <template>
 	<view class="content">
-		<span>222222222</span>
+		<com-leftside-bar />
 	</view>
 </template>
 
 <script setup>
+
 	// 防止挡住状态栏
 	const statusBarHeight = ref(uni.getSystemInfoSync().statusBarHeight + "px")
 	// #ifdef MP-WEIXIN
@@ -12,7 +13,6 @@
 	console.log(navigationBar)
 	const navigationBarHeight = ref((navigationBar.height + navigationBar.top * 2 - uni.getSystemInfoSync().statusBarHeight).toString() + "px")
 	// #endif
-	
 
 </script>
 
