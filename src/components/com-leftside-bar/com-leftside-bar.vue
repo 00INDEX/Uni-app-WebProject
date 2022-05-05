@@ -1,6 +1,6 @@
 <template>
-    <view>
-        1111
+    <view class="content">
+        123
     </view>
 </template>
 
@@ -9,5 +9,7 @@
 </script>
 
 <style scoped>
-
+.content{
+    display: flex;
+}
 </style>
