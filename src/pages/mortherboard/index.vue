@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		
+		<button @click="httpTest">测试Axios</button>
 	</view>
 </template>
 
@@ -13,6 +13,10 @@
 	console.log(navigationBar)
 	const navigationBarHeight = ref((navigationBar.height + navigationBar.top * 2 - uni.getSystemInfoSync().statusBarHeight).toString() + "px")
 	// #endif
+
+	const httpTest = () => {
+		axiosUtil.get("/test", {val: 998})
+	}
 
 </script>
 
