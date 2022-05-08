@@ -4,7 +4,6 @@ import {dirResolver, DirResolverHelper} from 'vite-auto-import-resolvers'
 import uni from "@dcloudio/vite-plugin-uni";
 import path, { dirname } from "path"
 import visualizer from 'rollup-plugin-visualizer'
-import WindiCSS from 'vite-plugin-windicss'
 
 plugins = []
 
@@ -31,6 +30,10 @@ function createAutoImport() {
 		dts: false
 	})
 }
+
+/**
+ * @description 打包分析
+ */
 if(process.env.VITE_ENV_MODE == 'DEV'){
 	plugins.push(
 		visualizer({
@@ -45,7 +48,7 @@ if(process.env.VITE_ENV_MODE == 'DEV'){
  * @type {import('vite').UserConfig}
  */
 export default defineConfig({
-  plugins: [uni(), createAutoImport(), DirResolverHelper(), WindiCSS(), ...plugins],
+  plugins: [uni(), createAutoImport(), DirResolverHelper(), ...plugins],
   resolve: {
 	  alias: {
 		  "@": path.resolve(__dirname, "src")

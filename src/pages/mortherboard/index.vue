@@ -18,7 +18,7 @@
 
 <style scoped>
 	.content{
-		background-color: #fcf9ec;
+		background-color: aqua;
 		height: 100vh;
 		width: 100%;
 		padding-top: v-bind(statusBarHeight);
