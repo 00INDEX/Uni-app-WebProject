@@ -1,8 +1,14 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import autoImport from 'unplugin-auto-import/vite'
 import {dirResolver, DirResolverHelper} from 'vite-auto-import-resolvers'
 import uni from "@dcloudio/vite-plugin-uni";
 import path, { dirname } from "path"
+import visualizer from 'rollup-plugin-visualizer'
+import WindiCSS from 'vite-plugin-windicss'
+
+plugins = []
+
+require('dotenv').config({path: './.env'})
 
 /**
  * @description 实现自动按需导入
@@ -25,12 +31,21 @@ function createAutoImport() {
 		dts: false
 	})
 }
+if(process.env.VITE_ENV_MODE == 'DEV'){
+	plugins.push(
+		visualizer({
+			open: true,
+			gzipSize: true,
+			brotliSize: true
+		})
+	)
+}
 
 /**
  * @type {import('vite').UserConfig}
  */
 export default defineConfig({
-  plugins: [uni(), createAutoImport(), DirResolverHelper()],
+  plugins: [uni(), createAutoImport(), DirResolverHelper(), WindiCSS(), ...plugins],
   resolve: {
 	  alias: {
 		  "@": path.resolve(__dirname, "src")

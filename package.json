@@ -37,9 +37,14 @@
     "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3040120220308001",
     "@types/html5plus": "^1.0.2",
     "@types/uni-app": "^1.4.4",
+    "dotenv": "^16.0.0",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "sass": "^1.51.0",
     "unplugin-auto-import": "^0.7.1",
     "unplugin-vue-components": "^0.19.3",
     "vite": "^2.9.5",
-    "vite-auto-import-resolvers": "^2.3.0"
+    "vite-auto-import-resolvers": "^2.3.0",
+    "vite-plugin-windicss": "^1.8.4",
+    "windicss": "^3.5.1"
   }
 }

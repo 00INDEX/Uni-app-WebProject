@@ -1,6 +1,7 @@
 import App from './App'
 
 import 'animate.css'
+import 'virtual:windi.css'
 
 // #ifndef VUE3
 import Vue from 'vue'

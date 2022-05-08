@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<com-leftside-bar />
+		
 	</view>
 </template>
 
