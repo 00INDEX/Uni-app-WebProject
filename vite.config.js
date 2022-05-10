@@ -34,6 +34,8 @@ function createAutoImport() {
 /**
  * @description 打包分析
  */
+
+/** 
 if(process.env.VITE_ENV_MODE == 'DEV'){
 	plugins.push(
 		visualizer({
@@ -43,7 +45,7 @@ if(process.env.VITE_ENV_MODE == 'DEV'){
 		})
 	)
 }
-
+*/
 /**
  * @type {import('vite').UserConfig}
  */

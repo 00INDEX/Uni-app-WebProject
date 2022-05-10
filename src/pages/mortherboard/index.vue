@@ -15,7 +15,9 @@
 	// #endif
 
 	const httpTest = () => {
-		axiosUtil.get("/test", {val: 998})
+		requestUtil.request({
+			url: '/test'
+		})
 	}
 
 </script>
